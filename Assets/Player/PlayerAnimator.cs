@@ -15,7 +15,7 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Forward and backwards
+        //Forward movement
         if (Input.GetAxis("Vertical") > 0.0f)
         {
             animator.SetBool("IsMovingForward", true);
@@ -25,7 +25,17 @@ public class PlayerAnimator : MonoBehaviour
         {
             animator.SetBool("IsMovingForward", false);
         }
+        
+        //Backwards movement
+        if (Input.GetAxis("Vertical") < 0.0f)
+        {
+            animator.SetBool("IsMovingBackwards", true);
+        }
 
+        else
+        {
+            animator.SetBool("IsMovingBackwards", false);
+        }
 
         //Turning right
         if (Input.GetAxis("Horizontal") > 0.0f)
