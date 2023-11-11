@@ -6,6 +6,8 @@ public class PlayerAnimator : MonoBehaviour
 {
 
     Animator animator;
+    public bool isPlayerMovable = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,48 +17,61 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Forward movement
-        if (Input.GetAxis("Vertical") > 0.0f)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("IsMovingForward", true);
+            // Enable player movement when the spacebar is pressed for the first time
+            if (!isPlayerMovable)
+            {
+                isPlayerMovable = true;
+            }
         }
 
-        else
+
+        if (isPlayerMovable == true)
         {
-            animator.SetBool("IsMovingForward", false);
+            //Forward movement
+            if (Input.GetAxis("Vertical") > 0.0f)
+            {
+                animator.SetBool("IsMovingForward", true);
+            }
+
+            //TEST
+
+            else if (Input.GetAxis("Horizontal") > 0.0f)
+            {
+                animator.SetBool("IsTurningRight", true);
+            }
+
+            else if (Input.GetAxis("Horizontal") < 0.0f)
+            {
+                animator.SetBool("IsTurningLeft", true);
+            }
+
+            else
+            {
+                animator.SetBool("IsMovingForward", false);
+                animator.SetBool("IsTurningRight", false);
+                animator.SetBool("IsTurningLeft", false);
+
+            }
+
+
+
+
+
+            //Backwards movement
+            if (Input.GetAxis("Vertical") < 0.0f)
+            {
+                animator.SetBool("IsMovingBackwards", true);
+            }
+
+            else
+            {
+                animator.SetBool("IsMovingBackwards", false);
+            }
+
         }
         
-        //Backwards movement
-        if (Input.GetAxis("Vertical") < 0.0f)
-        {
-            animator.SetBool("IsMovingBackwards", true);
-        }
-
-        else
-        {
-            animator.SetBool("IsMovingBackwards", false);
-        }
-
-        //Turning right
-        if (Input.GetAxis("Horizontal") > 0.0f)
-        {
-            animator.SetBool("IsTurningRight", true);
-        }
-
-        else
-        {
-            animator.SetBool("IsTurningRight", false);
-        }
-
-       //Turning left
-        if (Input.GetAxis("Horizontal") < 0.0f)
-        {
-            animator.SetBool("IsTurningLeft", true);
-        }
-
-        else
-        {
-            animator.SetBool("IsTurningLeft", false);
-        }
+        
     }
 }

@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 5.0f;
     public float moveForce = 10.0f; // Adjust this value to control the movement force.
     private Rigidbody rb;
+    public bool isPlayerMovable = false;
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +15,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void MovePlayer()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
+
         // Get the player's input for forward and backward movement.
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -34,8 +35,17 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply force to move the player in the calculated direction.
         rb.AddForce(moveDirection * moveForce, ForceMode.Force);
+    }
 
 
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (isPlayerMovable)
+        {
+            MovePlayer();
+        }
 
     }
    
