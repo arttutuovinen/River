@@ -39248,10 +39248,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space to Start
+  m_text: Press space to Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: deb0ba837db98e8468ef1a59fa3a6b16, type: 2}
-  m_sharedMaterial: {fileID: -4278384871762972197, guid: deb0ba837db98e8468ef1a59fa3a6b16,
+  m_fontAsset: {fileID: 11400000, guid: 787f8f0041b547749b50674bf4bb89ca, type: 2}
+  m_sharedMaterial: {fileID: 2941829845633620544, guid: 787f8f0041b547749b50674bf4bb89ca,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
