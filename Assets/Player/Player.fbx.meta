@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: character
+    second: {fileID: 2100000, guid: 08f20a626cb99ff47b0ae32407433513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hands
+    second: {fileID: 2100000, guid: 08f20a626cb99ff47b0ae32407433513, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: hat
     second: {fileID: 2100000, guid: e2f313f162906854ab87bb96099d1644, type: 2}
   - first:
