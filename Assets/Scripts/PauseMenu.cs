@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public bool GameIsPaused = true;
     public GameObject pauseMenuUI;
     public PlayerMovement playerScript;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        StartCoroutine(PauseMenuCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator PauseMenuCoroutine()
     {
-        if (Input.GetKey(KeyCode.Space))
+        while (true)
         {
-            if (GameIsPaused)
+            if (Input.GetKey(KeyCode.Space))
             {
                 pauseMenuUI.SetActive(false);
-                GameIsPaused = false;
-                playerScript.isPlayerMovable = true;
+                playerScript.StartPlayer();
+                yield break;
             }
-            
+
+            yield return null;
         }
     }
 }

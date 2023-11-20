@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rowingSound = GetComponent<AudioSource>();
+        rb.isKinematic = true;
     }
 
     void MovePlayer()
@@ -26,13 +27,11 @@ public class PlayerMovement : MonoBehaviour
         // Get the player's input for forward and backward movement.
         verticalInput = Input.GetAxis("Vertical");
 
-
         // Check for left and right arrow keys (or 'A' and 'D' keys) and rotate the player accordingly.
         if (horizontalInput != 0)
         {
             float rotationAmount = horizontalInput * rotationSpeed * Time.deltaTime;
             transform.Rotate(new Vector3(0, 1, 0), rotationAmount);
-
         }
 
         if (verticalInput != 0)
@@ -42,30 +41,26 @@ public class PlayerMovement : MonoBehaviour
 
             // Apply force to move the player in the calculated direction.
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
-        }
-
-       
-        
+        }        
     }
 
     public void PlayRowingSound()
     {
-        
-       
-            rowingSound.Play();
-        
+        rowingSound.Play();        
     }
     
+    public void StartPlayer()
+    {
+        rb.isKinematic = false;
+        isPlayerMovable = true;
+    }
     
     // Update is called once per frame
     void Update()
     {
-
         if (isPlayerMovable)
         {
             MovePlayer();
         }
-
     }
-   
 }

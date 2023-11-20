@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 069a5408e819eca46bab8b387dba3332
+guid: 6b445321f4dcbdd46bb8b6af59eae858
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: foliage
-    second: {fileID: 2100000, guid: 23ede8aea316432489874b3d071de9bd, type: 2}
+      name: fishFin
+    second: {fileID: 2100000, guid: 1dd58b0146504f641bc58ff0c49d78ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fishRed
+    second: {fileID: 2100000, guid: 1452d9394b257d14095df5f4a8639179, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -53,7 +58,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

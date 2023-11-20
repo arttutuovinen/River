@@ -5,7 +5,6 @@ using UnityEngine;
 public class SceneFader : MonoBehaviour
 {
     public Image fadeImage;
-    public float fadeSpeed = 1.0f;
 
     private void Start()
     {
@@ -17,10 +16,16 @@ public class SceneFader : MonoBehaviour
         Color startColor = fadeImage.color;
         Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 0.0f);
 
-        float t = 0.0f;
-        while (t < 1.0f)
+        float timer = 0f;
+        float animationTime = 8f;
+
+        while (timer < animationTime)
         {
-            t += Time.deltaTime * fadeSpeed;
+            timer += Time.deltaTime;
+
+            float t = timer / animationTime;
+            t = t * t * (3f - 2f * t);
+
             fadeImage.color = Color.Lerp(startColor, targetColor, t);
             yield return null;
         }
