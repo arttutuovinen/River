@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 125
   m_IsActive: 1
 --- !u!4 &6194534890171608045
 Transform:
@@ -94,6 +94,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bush_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f914f0e27cde5d742b62f33bf29044bb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

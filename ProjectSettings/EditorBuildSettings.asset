@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/River_01.unity
     guid: 1d0ea71501d8290408e997cac11e8932
+  - enabled: 1
+    path: Assets/Scenes/River_02_lighting test.unity
+    guid: 6273850cc3ce4e2418e608dfc7df9f89
   m_configObjects: {}

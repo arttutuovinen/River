@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 125
   m_IsActive: 1
 --- !u!4 &4701909032270348130
 Transform:
@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: long grass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 069a5408e819eca46bab8b387dba3332,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -235,6 +240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: long grass
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 069a5408e819eca46bab8b387dba3332,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -328,6 +338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: long grass (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 069a5408e819eca46bab8b387dba3332,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
