@@ -62,5 +62,10 @@ public class PlayerMovement : MonoBehaviour
         {
             MovePlayer();
         }
+        //Quitting game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
